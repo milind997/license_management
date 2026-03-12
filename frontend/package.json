@@ -1,0 +1,27 @@
+{
+  "name": "license-management-ui",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/assets/license_management/frontend/ && npm run copy-html-entry",
+    "copy-html-entry": "cp ../license_management/public/frontend/index.html ../license_management/www/license_management.html",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroui/react": "^2.8.9",
+    "@heroui/theme": "^2.4.26",
+    "axios": "^1.13.6",
+    "framer-motion": "^12.35.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "vite": "^6.3.5"
+  }
+}

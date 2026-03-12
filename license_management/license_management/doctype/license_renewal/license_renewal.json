@@ -1,0 +1,159 @@
+{
+  "actions": [],
+  "autoname": "REN-.YYYY.-.#####",
+  "creation": "2026-03-12 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "license",
+    "license_store_name",
+    "column_break_main",
+    "approval_status",
+    "workflow_state",
+    "dates_section",
+    "renewal_date",
+    "column_break_dates",
+    "new_expiry_date",
+    "details_section",
+    "prev_license_ref",
+    "column_break_details",
+    "inspection_required",
+    "checklist_section",
+    "checklist",
+    "email_section",
+    "send_email_notification"
+  ],
+  "fields": [
+    {
+      "fieldname": "license",
+      "fieldtype": "Link",
+      "label": "License",
+      "options": "License",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "license_store_name",
+      "fieldtype": "Data",
+      "label": "Store Name",
+      "fetch_from": "license.store_name_jp",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "approval_status",
+      "fieldtype": "Select",
+      "label": "Approval Status",
+      "options": "Open\nSubmitted\nUnder Review\nInspection\nApproved\nRejected",
+      "default": "Open",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "workflow_state",
+      "fieldtype": "Select",
+      "label": "Workflow State",
+      "options": "Draft\nSubmitted\nUnder Review\nInspection\nApproved\nRejected",
+      "default": "Draft",
+      "hidden": 1
+    },
+    {
+      "fieldname": "dates_section",
+      "fieldtype": "Section Break",
+      "label": "Dates"
+    },
+    {
+      "fieldname": "renewal_date",
+      "fieldtype": "Date",
+      "label": "Renewal Application Date",
+      "reqd": 1,
+      "default": "Today",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_dates",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "new_expiry_date",
+      "fieldtype": "Date",
+      "label": "New Expiry Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "details_section",
+      "fieldtype": "Section Break",
+      "label": "Details"
+    },
+    {
+      "fieldname": "prev_license_ref",
+      "fieldtype": "Data",
+      "label": "Previous License Reference",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_details",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "inspection_required",
+      "fieldtype": "Check",
+      "label": "Inspection Required",
+      "default": 0
+    },
+    {
+      "fieldname": "checklist_section",
+      "fieldtype": "Section Break",
+      "label": "Document Checklist"
+    },
+    {
+      "fieldname": "checklist",
+      "fieldtype": "Table",
+      "label": "Document Checklist",
+      "options": "License Renewal Checklist"
+    },
+    {
+      "fieldname": "email_section",
+      "fieldtype": "Section Break",
+      "label": "Notifications"
+    },
+    {
+      "fieldname": "send_email_notification",
+      "fieldtype": "Check",
+      "label": "Send Email Notification on Status Change",
+      "default": 0
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "links": [],
+  "modified": "2026-03-12 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "License Management",
+  "name": "License Renewal",
+  "naming_rule": "Expression (old style)",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "title_field": "license_store_name",
+  "show_title_field_in_link": 1
+}

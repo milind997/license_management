@@ -10,16 +10,19 @@ app_license = "mit"
 
 # required_apps = []
 
-# Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "license_management",
-# 		"logo": "/assets/license_management/logo.png",
-# 		"title": "License Management",
-# 		"route": "/license_management",
-# 		"has_permission": "license_management.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "license_management",
+		"logo": "/assets/license_management/logo.png",
+		"title": "License Management",
+		"route": "/license-management",
+	}
+]
+
+website_route_rules = [
+	{"from_route": "/license-management/<path:app_path>", "to_route": "license_management"},
+	{"from_route": "/license-management", "to_route": "license_management"},
+]
 
 # Includes in <head>
 # ------------------
